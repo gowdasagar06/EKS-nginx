@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment-k8s-secrets
+  labels:
+    app: nginx-k8s-secrets
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-k8s-secrets
+  template:
+    metadata:
+      labels:
+        app: nginx-k8s-secrets
+    spec:
+      containers:
+        - name: nginx-test
+          image: nginx
+          # imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
