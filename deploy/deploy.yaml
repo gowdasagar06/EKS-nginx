@@ -16,8 +16,8 @@ spec:
       containers:
       - name: nginx
         # image: nginx:latest
-        image: gowdasagar/nginx-blue-green:blue-v1
-        # image: gowdasagar/nginx-blue-green:green-v2
+        # image: gowdasagar/nginx-blue-green:blue-v1
+        image: gowdasagar/nginx-blue-green:green-v2
         ports:
         - containerPort: 80
 
